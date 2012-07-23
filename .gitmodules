@@ -4,3 +4,6 @@
 [submodule "yiiapp/protected/extensions/gtc"]
 	path = yiiapp/protected/extensions/gtc
 	url = https://github.com/thyseus/gii-template-collection.git
+[submodule "yiiapp/protected/extensions/yii-user-management"]
+	path = yiiapp/protected/extensions/yii-user-management
+	url = https://github.com/thyseus/yii-user-management
