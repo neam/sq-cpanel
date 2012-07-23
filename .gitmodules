@@ -1,3 +1,6 @@
 [submodule "yii"]
 	path = yii
 	url = https://github.com/yiisoft/yii.git
+[submodule "yiiapp/protected/extensions/gtc"]
+	path = yiiapp/protected/extensions/gtc
+	url = https://github.com/thyseus/gii-template-collection.git
