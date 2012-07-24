@@ -13,8 +13,56 @@ return array(
 	'import' => array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.user.models.*',
 	),
 	'modules' => array(
+		'user' => array(
+			'debug' => false,
+			'userTable' => 'user',
+			'translationTable' => 'translation',
+		),
+		/*
+		  'usergroup' => array(
+		  'usergroupTable' => 'usergroup',
+		  'usergroupMessageTable' => 'user_group_message',
+		  ),
+		 */
+		'membership' => array(
+			'membershipTable' => 'membership',
+			'paymentTable' => 'payment',
+		),
+		'profile' => array(
+			'privacySettingTable' => 'privacysetting',
+			'profileFieldTable' => 'profile_field',
+			'profileTable' => 'profile',
+			'profileCommentTable' => 'profile_comment',
+			'profileVisitTable' => 'profile_visit',
+		),
+		/*
+		  'friendship' => array(
+		  'friendshipTable' => 'friendship',
+		  ),
+		  'profile' => array(
+		  'privacySettingTable' => 'privacysetting',
+		  'profileFieldTable' => 'profile_field',
+		  'profileTable' => 'profile',
+		  'profileCommentTable' => 'profile_comment',
+		  'profileVisitTable' => 'profile_visit',
+		  ),
+		 */
+		'role' => array(
+			'roleTable' => 'role',
+			'userRoleTable' => 'user_role',
+			'actionTable' => 'action',
+			'permissionTable' => 'permission',
+		),
+		/*
+		  'message' => array(
+		  'messageTable' => 'message',
+		  ),
+		 */
+		'registration' => array(),
+		'avatar' => array(),
 	// uncomment the following to enable the Gii tool
 	/*
 	  'gii'=>array(
@@ -28,8 +76,10 @@ return array(
 	// application components
 	'components' => array(
 		'user' => array(
+			'class' => 'application.modules.user.components.YumWebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin' => true,
+			'loginUrl' => array('//user/user/login'),
 		),
 		// uncomment the following to enable URLs in path-format
 		/*
@@ -58,6 +108,9 @@ return array(
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
 			'errorAction' => 'site/error',
+		),
+		'cache' => array(
+			'class' => 'CFileCache',
 		),
 		'log' => array(
 			'class' => 'CLogRouter',
