@@ -7,3 +7,6 @@
 [submodule "yiiapp/protected/extensions/yii-user-management"]
 	path = yiiapp/protected/extensions/yii-user-management
 	url = https://github.com/thyseus/yii-user-management
+[submodule "yiiapp/themes/chromatron"]
+	path = yiiapp/themes/chromatron
+	url = https://github.com/neam/sq-theme-chromatron.git
