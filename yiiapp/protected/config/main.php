@@ -4,7 +4,7 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-return array(
+$config = array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'Selfminer Control Panel',
 	// preloading 'log' component
@@ -136,3 +136,5 @@ return array(
 		'adminEmail' => 'webmaster@example.com',
 	),
 );
+
+return $config;
