@@ -10,3 +10,6 @@
 [submodule "yiiapp/themes/chromatron"]
 	path = yiiapp/themes/chromatron
 	url = https://github.com/neam/sq-theme-chromatron.git
+[submodule "yiiapp/protected/extensions/yii-bootstrap"]
+	path = yiiapp/protected/extensions/yii-bootstrap
+	url = https://github.com/motin/yii-bootstrap.git
