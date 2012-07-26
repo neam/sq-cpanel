@@ -137,4 +137,15 @@ $config = array(
 	),
 );
 
+// Necessary for correct ui/theme rendering
+$config['theme'] = 'chromatron';
+$config['components']['clientScript'] = array(
+	'coreScriptPosition' => CClientScript::POS_END,
+);
+$config['preload'][] = 'bootstrap';
+$config['modules']['gii']['generatorPaths'][] = 'bootstrap.gii';
+$config['components']['bootstrap'] = array(
+	'class' => 'ext.yii-bootstrap.components.Bootstrap',
+);
+
 return $config;
