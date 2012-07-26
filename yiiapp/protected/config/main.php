@@ -141,6 +141,8 @@ $config = array(
 $config['theme'] = 'chromatron';
 $config['params']['defaultLayout'] = 'webroot.themes.chromatron.views.layouts.main';
 $config['modules']['user']['baseLayout'] = $config['params']['defaultLayout'];
+$config['params']['chromatron'] = array();
+$config['params']['chromatron']['navElement'] = 'application.views.site.elements.nav';
 $config['components']['clientScript'] = array(
 	'coreScriptPosition' => CClientScript::POS_END,
 );
