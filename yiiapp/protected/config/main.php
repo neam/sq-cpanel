@@ -139,6 +139,8 @@ $config = array(
 
 // Necessary for correct ui/theme rendering
 $config['theme'] = 'chromatron';
+$config['params']['defaultLayout'] = 'webroot.themes.chromatron.views.layouts.main';
+$config['modules']['user']['baseLayout'] = $config['params']['defaultLayout'];
 $config['components']['clientScript'] = array(
 	'coreScriptPosition' => CClientScript::POS_END,
 );

@@ -11,7 +11,14 @@ class Controller extends CController
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
 	 */
-	public $layout = 'webroot.themes.chromatron.views.layouts.main'; //'//layouts/column1';
+	public $layout = null; // Set in init()
+
+	public function init()
+	{
+		$this->layout = Yii::app()->params['defaultLayout'];
+		parent::init();
+	}
+
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
 	 */
