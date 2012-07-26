@@ -63,15 +63,16 @@ $config = array(
 		 */
 		'registration' => array(),
 		'avatar' => array(),
-	// uncomment the following to enable the Gii tool
-	/*
-	  'gii'=>array(
-	  'class'=>'system.gii.GiiModule',
-	  'password'=>'Enter Your Password Here',
-	  // If removed, Gii defaults to localhost only. Edit carefully to taste.
-	  'ipFilters'=>array('127.0.0.1','::1'),
-	  ),
-	 */
+		// uncomment the following to enable the Gii tool
+		'gii' => array(
+			'class' => 'system.gii.GiiModule',
+			'password' => YII_GII_PASSWORD,
+			// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'ipFilters' => array('127.0.0.1', '::1'),
+			'generatorPaths' => array(
+				'ext.gtc', // Gii Template Collection
+			),
+		),
 	),
 	// application components
 	'components' => array(
@@ -96,12 +97,12 @@ $config = array(
 		),
 		// uncomment the following to use a MySQL database
 		'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=sq_cpanel',
+			'connectionString' => 'mysql:host=' . YII_DB_HOST . (defined('YII_DB_PORT') ? ';port=' . YII_DB_HOST : '') . ';dbname=' . YII_DB_NAME,
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'zxcvasdfqwer',
+			'username' => YII_DB_USER,
+			'password' => YII_DB_PASSWORD,
 			'charset' => 'utf8',
-			'tablePrefix' => '',
+		//'schemaCachingDuration'=>3600*24,
 		),
 		'errorHandler' => array(
 			// use 'site/error' action to display errors
