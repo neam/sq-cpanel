@@ -6,10 +6,13 @@
 	url = https://github.com/thyseus/gii-template-collection.git
 [submodule "yiiapp/protected/extensions/yii-user-management"]
 	path = yiiapp/protected/extensions/yii-user-management
-	url = https://github.com/thyseus/yii-user-management
+	url = https://github.com/neam/yii-user-management.git
 [submodule "yiiapp/themes/chromatron"]
 	path = yiiapp/themes/chromatron
 	url = https://github.com/neam/sq-theme-chromatron.git
 [submodule "yiiapp/protected/extensions/yii-bootstrap"]
 	path = yiiapp/protected/extensions/yii-bootstrap
 	url = https://github.com/motin/yii-bootstrap.git
+[submodule "yiiapp/protected/extensions/virtualmin-php-api"]
+	path = yiiapp/protected/extensions/virtualmin-php-api
+	url = https://github.com/neam/virtualmin-php-api.git
