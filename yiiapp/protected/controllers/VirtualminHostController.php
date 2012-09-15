@@ -16,7 +16,7 @@ class VirtualminHostController extends Controller
 	{
 		return array(
 			array('allow',
-				'actions' => array('index', 'view'),
+				'actions' => array('index'),
 				'users' => array('*'),
 			),
 			array('allow',
@@ -24,7 +24,7 @@ class VirtualminHostController extends Controller
 				'users' => array('@'),
 			),
 			array('allow',
-				'actions' => array('admin', 'delete'),
+				'actions' => array('admin', 'delete', 'view'),
 				'users' => array('admin'),
 			),
 			array('deny',

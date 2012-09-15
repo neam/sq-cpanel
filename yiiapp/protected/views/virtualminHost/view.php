@@ -48,3 +48,17 @@ $this->widget('zii.widgets.CDetailView', array(
 	    Yii::t('app', 'Create'), array('/container/create', 'Container' => array('virtualmin_host_id' => $model->{$model->tableSchema->primaryKey}))
 	);
 	?></p>
+
+
+<?php
+
+$cmd = $model->getRemoteCommand('list-domains');
+$result = shell_exec($cmd);
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+
+$cmd = $model->getRemoteCommand('list-domains', array(), 'json');
+$result = shell_exec($cmd);
+var_dump(json_decode($result));
+
