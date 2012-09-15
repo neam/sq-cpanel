@@ -35,5 +35,13 @@ return array(
 				),
 			),
 		),
+		'fixture' => array(
+			'class' => 'system.test.CDbFixtureManager',
+		),
+	),
+	'commandMap' => array(
+		'fixture' => array(
+			'class' => 'application.extensions.fixtureHelper.FixtureHelperCommand',
+		),
 	),
 );
