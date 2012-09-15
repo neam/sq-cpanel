@@ -15,8 +15,11 @@ if (!$this->menu)
 <h2><?php echo Yii::t('app', 'View'); ?> VirtualminHost <?php echo $model->id; ?></h2>
 
 <?php
+$maskedModel = clone $model;
+$maskedModel->pass = str_repeat("*", strlen($maskedModel->pass));
+
 $this->widget('zii.widgets.CDetailView', array(
-	'data' => $model,
+	'data' => $maskedModel,
 	'attributes' => array(
 		'id',
 		'host',
