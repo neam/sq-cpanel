@@ -37,4 +37,35 @@ class VirtualminHost extends BaseVirtualminHost
 		);
 	}
 
+	public function getRemoteCommand($program, $params = null, $output = null)
+	{
+
+		$q = '';
+		if (is_array($params))
+		{
+			foreach ($params as $key => $value)
+			{
+				$q .= '&' . $key . '=' . $value;
+			}
+		}
+
+		if (!is_null($output))
+		{
+			$q .= '&' . $output . '=1';
+			if (strpos($program, 'list-') === 0)
+			{
+				$q .= '&multiline=';
+			}
+		}
+
+		$cmd = WGET . " -O - --quiet --http-user=" . escapeshellarg($this->user)
+		    . " --http-passwd=" . escapeshellarg($this->pass)
+		    . " --no-check-certificate "
+		    . escapeshellarg("https://" . $this->host . "/virtual-server/remote.cgi?program=$program" . $q)
+		//. " 2>&1"
+		;
+
+		return $cmd;
+	}
+
 }
