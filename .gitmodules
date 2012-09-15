@@ -16,3 +16,6 @@
 [submodule "yiiapp/protected/extensions/virtualmin-php-api"]
 	path = yiiapp/protected/extensions/virtualmin-php-api
 	url = https://github.com/neam/virtualmin-php-api.git
+[submodule "yiiapp/protected/extensions/fixtureHelper"]
+	path = yiiapp/protected/extensions/fixtureHelper
+	url = https://github.com/sumwai/fixtureHelper.git
