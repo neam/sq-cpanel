@@ -18,7 +18,7 @@ define('REVEALING_PATH', $revealing_path);
 // Debug
 //var_dump(compact("revealing_path"));
 
-if (strpos($revealing_path, '/Applications/XAMPP_1.7.3/xamppfiles/htdocs') !== false || strpos($revealing_path, '/Applications/XAMPP/xamppfiles/htdocs') !== false || strpos($revealing_path, '/Users/motin/Dev/Projects/sq/sq-app/yiiapp/protected') !== false || strpos($revealing_path, '/Users/motin/Dev/Projects/openlibraries_php/drupal/sites/all/modules/internal/oppnabibliotek') !== false || strpos($revealing_path, '/Users/motin/Dev/Projects/sq/sq-app/yiiapp/protected') !== false || strpos($revealing_path, '/Users/motin/Dev/Projects/ssb/ssb_mobile/_drupal/_internal/modules/ssb_emedia') !== false)
+if (strpos($revealing_path, '/Applications/XAMPP_1.7.3/xamppfiles/htdocs') !== false || strpos($revealing_path, '/Applications/XAMPP/xamppfiles/htdocs') !== false || strpos($revealing_path, '/Users/motin/Dev/Projects/sq/sq-cpanel/yiiapp') !== false)
 {
 	// local set-up
 	define('DEV_UNIX_USER', 'motin');
