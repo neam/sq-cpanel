@@ -12,8 +12,10 @@ $config = array(
 	// autoloading model and component classes
 	'import' => array(
 		'application.models.*',
+		'application.models.yum.*',
 		'application.components.*',
 		'application.modules.user.models.*',
+		'ext.gtc.components.*',
 	),
 	'modules' => array(
 		'user' => array(
